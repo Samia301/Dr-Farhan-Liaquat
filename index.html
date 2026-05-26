@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Muhammad Farhan Liaquat | Premium Clinic</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+
+    body{background:#f4f9ff;color:#222}
+
+    /* LOADER */
+    #loader{
+      position:fixed;inset:0;background:white;display:flex;align-items:center;justify-content:center;z-index:9999
+    }
+
+    .spinner{
+      width:50px;height:50px;border:5px solid #eee;border-top:5px solid #0b5ed7;border-radius:50%;animation:spin 1s linear infinite
+    }
+
+    @keyframes spin{100%{transform:rotate(360deg)}}
+
+    header{
+      background:rgba(11,94,215,0.95);
+      padding:15px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;top:0;z-index:1000;color:white
+    }
+
+    .logo{font-size:22px;font-weight:700}
+
+    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+    nav a{color:white;text-decoration:none;font-weight:500}
+
+    .lang{background:white;color:#0b5ed7;padding:6px 12px;border-radius:20px;border:none;cursor:pointer;font-weight:600}
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:90px 7%;
+      gap:40px;
+      flex-wrap:wrap;
+      background:
+      linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.96)),
+      url('https://images.unsplash.com/photo-1587351021759-3e566b3db4f1?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover
+    }
+
+    .hero h1{font-size:50px;color:#0b5ed7}
+    .hero p{margin:15px 0 25px;color:#444;font-size:18px}
+
+    .btn{padding:12px 22px;border-radius:30px;background:#0b5ed7;color:white;text-decoration:none;font-weight:600;display:inline-block;margin-right:10px}
+    .whatsapp{background:#25D366}
+
+    section{padding:70px 7%}
+
+    .title{text-align:center;margin-bottom:40px}
+    .title h2{font-size:36px;color:#0b5ed7}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+    .card{background:white;padding:25px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,0.08)}
+
+    /* REVIEWS */
+    .review{
+      background:#eef5ff
+    }
+
+    .review-card{
+      background:white;padding:20px;border-radius:15px
+    }
+
+    /* MAP */
+    iframe{
+      width:100%;height:300px;border-radius:15px;border:none
+    }
+
+    /* CONTACT */
+    .contact{
+      background:#0b5ed7;color:white;padding:50px;border-radius:25px;text-align:center
+    }
+
+    input,textarea{
+      width:100%;padding:12px;margin-top:10px;border-radius:10px;border:none
+    }
+
+    textarea{height:100px}
+
+    footer{background:#06142c;color:white;text-align:center;padding:15px}
+
+    /* FLOAT */
+    .float{
+      position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50px;text-decoration:none
+    }
+
+    @media(max-width:768px){
+      .hero{flex-direction:column-reverse;text-align:center}
+      .hero h1{font-size:32px}
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader"><div class="spinner"></div></div>
+
+<header>
+  <div class="logo">Dr. Farhan Liaquat</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#map">Map</a>
+    <a href="#contact">Contact</a>
+    <button class="lang" onclick="toggleLang()">UR/EN</button>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+
+  <div>
+    <h1 id="title">Trusted Internal Medicine Specialist</h1>
+    <p id="desc">10+ years experience in diabetes, heart, kidney & thyroid care.</p>
+
+    <a href="#contact" class="btn">Book Appointment</a>
+    <a href="https://wa.me/923480403153" class="btn whatsapp" target="_blank">WhatsApp Booking</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1000&auto=format&fit=crop">
+
+</section>
+
+<section id="services">
+  <div class="title"><h2>Services</h2></div>
+  <div class="grid">
+    <div class="card">General Checkup</div>
+    <div class="card">Diabetes Care</div>
+    <div class="card">Heart Diseases</div>
+    <div class="card">Kidney Treatment</div>
+    <div class="card">Thyroid Disorders</div>
+    <div class="card">Infections</div>
+  </div>
+</section>
+
+<section id="reviews" class="review">
+  <div class="title"><h2>Patient Reviews</h2></div>
+  <div class="grid">
+    <div class="review-card">"Very professional doctor, highly recommended" ⭐⭐⭐⭐⭐</div>
+    <div class="review-card">"Excellent treatment and care" ⭐⭐⭐⭐⭐</div>
+    <div class="review-card">"Best physician in Lahore" ⭐⭐⭐⭐⭐</div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="title"><h2>Clinic Location</h2></div>
+  <iframe src="https://www.google.com/maps?q=Liaqat+Medical+Clinic+Lahore&output=embed"></iframe>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2 id="book">Book Appointment</h2>
+
+    <p>042-34500888 | 042-38900939</p>
+    <p>+92 348 0403153</p>
+
+    <form onsubmit="alert('Appointment Sent');return false;">
+      <input placeholder="Name" required>
+      <input placeholder="Phone" required>
+      <textarea placeholder="Message"></textarea>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<a class="float" href="https://wa.me/923480403153" target="_blank">WhatsApp</a>
+
+<footer>© 2026 Dr. Farhan Liaquat | Premium Demo</footer>
+
+<script>
+
+window.onload=function(){document.getElementById('loader').style.display='none'}
+
+let urdu=false;
+
+function toggleLang(){
+  if(!urdu){
+    document.getElementById('title').innerText='قابل اعتماد ڈاکٹر';
+    document.getElementById('desc').innerText='10+ سال کا تجربہ رکھنے والے ماہر ڈاکٹر';
+    document.getElementById('book').innerText='اپائنٹمنٹ بک کریں';
+    urdu=true;
+  }else{
+    location.reload();
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+
+
